@@ -1,2 +1,8 @@
-import math
-print(math.tan(math.pi/4))
+"""
+Test DocString
+"""
+def f(x):
+    x = x[:]
+    return x
+
+f("abc")
