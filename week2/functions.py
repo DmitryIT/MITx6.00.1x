@@ -1,7 +1,13 @@
-"""
-Test DocString
-"""
-def f(x,y):
-    x + y + 2
+def gcdRecur(a, b):
+    '''
+    a, b: positive integers
 
-print(f)
+    returns: a positive integer, the greatest common divisor of a & b.
+    '''
+    if b == 0:
+        return a
+    else:
+        return gcdRecur(b, a%b)
+
+print(gcdRecur(35434,587))
+
