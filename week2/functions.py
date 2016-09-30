@@ -1,13 +1,7 @@
 """
 Test DocString
 """
-def f(x):
-    x = x[::-1]
-    print(id(x))
-    return x
+def f(x,y):
+    x + y + 2
 
-
-x = "abcdefg"
-print(id(x))
-x = f("%s" % x)
-print(id(x))
+print(f)
