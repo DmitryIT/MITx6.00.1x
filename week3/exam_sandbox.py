@@ -1,20 +1,15 @@
-def closest_power(base, num):
+def flatten(aList):
     '''
-    base: base of the exponential, integer > 1
-    num: number you want to be closest to, integer > 0
-    Find the integer exponent such that base**exponent is closest to num.
-    Note that the base**exponent may be either greater or smaller than num.
-    In case of a tie, return the smaller value.
-    Returns the exponent.
+    aList: a list
+    Returns a copy of aList, which is a flattened version of aList
     '''
-    exponent = 1
-    while base**exponent < num:
-        exponent +=1
-    prev_exponent = exponent-1
+    flattend_list=[]
+    for i in aList:
+        if type(i) is list:
+            flattend_list += flatten(i)
+        else:
+            flattend_list.append(i)
+    return flattend_list
 
-    if abs(base**prev_exponent-num)<=abs((base**exponent)-num):
-        return prev_exponent
-    else:
-        return exponent
-
-print(closest_power(4,0))
+l = [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+print(flatten(l))
