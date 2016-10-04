@@ -1,9 +1,10 @@
-def Square(x):
-    return SquareHelper(abs(x), abs(x))
-
-def SquareHelper(n,x):
-    if n==0:
-        return 0
-    return SquareHelper(n-1, x) + x
-
-print(Square(-2.0000))
+def closest_power(base, num):
+    '''
+    base: base of the exponential, integer > 1
+    num: number you want to be closest to, integer > 0
+    Find the integer exponent such that base**exponent is closest to num.
+    Note that the base**exponent may be either greater or smaller than num.
+    In case of a tie, return the smaller value.
+    Returns the exponent.
+    '''
+    # Your code here
